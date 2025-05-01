@@ -1,3 +1,99 @@
+# J-Jobs - Job Board Platform
+
+A modern job board platform built with Astro, focusing on warehouse and electrical industry jobs. The platform features automated content management, SEO optimization, and Google Jobs integration through structured data.
+
+## 🚀 Key Features
+
+- **Content Management**
+  - Automated job posting generation and updates
+  - Content collections for jobs, blog posts, recruiting content, and info pages
+  - Structured data implementation for Google Jobs indexing
+  - Location-based job categorization
+
+- **Automation Scripts**
+  - Job description updates using OpenAI
+  - State-specific content generation
+  - Automated email notifications for content updates
+  - Job indexing and management tools
+
+- **SEO & Performance**
+  - JSON-LD structured data for job postings
+  - Optimized meta tags and social sharing
+  - Static site generation for optimal performance
+  - Automated sitemap generation
+
+## 📁 Project Structure
+
+```
+├── content/
+│   ├── jobs/         # Job posting markdown files
+│   ├── posts/        # Blog post content
+│   ├── recruiting/   # Recruiting-related content
+│   └── infopages/    # Information pages
+├── scripts/
+│   ├── update-*.js   # Content update automation
+│   ├── create-*.js   # Content generation scripts
+│   └── notify-*.js   # Notification system scripts
+└── src/
+    └── layouts/      # Page layouts and templates
+```
+
+## 🔄 Content Updates
+
+The project includes several ways to update content:
+
+1. **Automated Updates**
+   - Run update scripts for job descriptions
+   - Generate state-specific content
+   - Automated email notifications for changes
+
+2. **Manual Updates**
+   - Edit markdown files in content directories
+   - Commit changes to trigger rebuild
+   - Deploy updated content
+
+3. **Post-Deployment Updates**
+   - Requires rebuild and redeployment
+   - Consider implementing CI/CD pipeline
+   - Supports incremental updates
+
+## 🛠 Development Notes
+
+Important commit references:
+- `0aa7041c9c921d77fddb680d73bb62390d526e83`: Pre-company pages content
+- `e7558b5fee2e76fd8be582ce6592dcb2d3e731a8`: Pre-glossary and reduced jobs show on @open-positions
+
+## 📦 Scripts Overview
+
+Key automation scripts:
+- `update-descriptions.js`: Updates job descriptions using OpenAI
+- `update-state-content.js`: Generates location-specific content
+- `notify-content-updates.js`: Handles update notifications
+- `index-jobs.js`: Manages job indexing and organization
+
+## 🔍 SEO Implementation
+
+The platform implements comprehensive SEO features:
+- Structured data for job postings
+- Optimized meta tags
+- Social media previews
+- Automated sitemap generation
+
+## 🚀 Getting Started
+
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Run development server: `npm run dev`
+4. Build for production: `npm run build`
+
+## 📝 License
+
+[Add your license information here]
+
+---
+
+For more information about the project structure or implementation details, please refer to the documentation in the respective directories.
+
 # TEMPLATE SOLID USE _ DO NOT MESS WITH> JUST GIT CLONE BABY 
 
 ## SO SICKKKKKKKKKKKKKKKK
