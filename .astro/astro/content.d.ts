@@ -1137,6 +1137,349 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "posts": {
+"abilene-photographers-urgent-need.md": {
+	id: "abilene-photographers-urgent-need.md";
+  slug: "abilene-photographers-urgent-need";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"allen-architects-urgent-need.md": {
+	id: "allen-architects-urgent-need.md";
+  slug: "allen-architects-urgent-need";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"amarillo-mechanics-urgent-need.md": {
+	id: "amarillo-mechanics-urgent-need.md";
+  slug: "amarillo-mechanics-urgent-need";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"arlington-customer-service-openings.md": {
+	id: "arlington-customer-service-openings.md";
+  slug: "arlington-customer-service-openings";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"austin-web-developers-hiring.md": {
+	id: "austin-web-developers-hiring.md";
+  slug: "austin-web-developers-hiring";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"baytown-receptionists-jobs.md": {
+	id: "baytown-receptionists-jobs.md";
+  slug: "baytown-receptionists-jobs";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"beaumont-truck-drivers-hiring.md": {
+	id: "beaumont-truck-drivers-hiring.md";
+  slug: "beaumont-truck-drivers-hiring";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"brownsville-warehouse-workers-join.md": {
+	id: "brownsville-warehouse-workers-join.md";
+  slug: "brownsville-warehouse-workers-join";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"bryan-baristas-jobs.md": {
+	id: "bryan-baristas-jobs.md";
+  slug: "bryan-baristas-jobs";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"carrollton-dental-hygienists-jobs.md": {
+	id: "carrollton-dental-hygienists-jobs.md";
+  slug: "carrollton-dental-hygienists-jobs";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"college-station-lab-technicians-apply.md": {
+	id: "college-station-lab-technicians-apply.md";
+  slug: "college-station-lab-technicians-apply";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"corpus-christi-data-analysts-join.md": {
+	id: "corpus-christi-data-analysts-join.md";
+  slug: "corpus-christi-data-analysts-join";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"dallas-commercial-electrician-staffing.md": {
+	id: "dallas-commercial-electrician-staffing.md";
+  slug: "dallas-commercial-electrician-staffing";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"denton-real-estate-agents-jobs.md": {
+	id: "denton-real-estate-agents-jobs.md";
+  slug: "denton-real-estate-agents-jobs";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"edinburg-translators-jobs.md": {
+	id: "edinburg-translators-jobs.md";
+  slug: "edinburg-translators-jobs";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"el-paso-software-engineer-roles.md": {
+	id: "el-paso-software-engineer-roles.md";
+  slug: "el-paso-software-engineer-roles";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"flower-mound-videographers-urgent-need.md": {
+	id: "flower-mound-videographers-urgent-need.md";
+  slug: "flower-mound-videographers-urgent-need";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"fort-worth-teachers-apply.md": {
+	id: "fort-worth-teachers-apply.md";
+  slug: "fort-worth-teachers-apply";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"frisco-it-support-staff-search.md": {
+	id: "frisco-it-support-staff-search.md";
+  slug: "frisco-it-support-staff-search";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"garland-restaurant-chefs-hiring.md": {
+	id: "garland-restaurant-chefs-hiring.md";
+  slug: "garland-restaurant-chefs-hiring";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"grand-prairie-security-guards-jobs.md": {
+	id: "grand-prairie-security-guards-jobs.md";
+  slug: "grand-prairie-security-guards-jobs";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"harlingen-cooks-urgent-need.md": {
+	id: "harlingen-cooks-urgent-need.md";
+  slug: "harlingen-cooks-urgent-need";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"houston-marketing-careers.md": {
+	id: "houston-marketing-careers.md";
+  slug: "houston-marketing-careers";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"irving-logistics-coordinators-apply.md": {
+	id: "irving-logistics-coordinators-apply.md";
+  slug: "irving-logistics-coordinators-apply";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"killeen-pharmacy-technicians-join.md": {
+	id: "killeen-pharmacy-technicians-join.md";
+  slug: "killeen-pharmacy-technicians-join";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"laredo-project-managers-now.md": {
+	id: "laredo-project-managers-now.md";
+  slug: "laredo-project-managers-now";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"league-city-security-officers-jobs.md": {
+	id: "league-city-security-officers-jobs.md";
+  slug: "league-city-security-officers-jobs";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"longview-mechanics-helpers-urgent-need.md": {
+	id: "longview-mechanics-helpers-urgent-need.md";
+  slug: "longview-mechanics-helpers-urgent-need";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"lubbock-accounting-staff-available.md": {
+	id: "lubbock-accounting-staff-available.md";
+  slug: "lubbock-accounting-staff-available";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"mckinney-construction-workers-hiring.md": {
+	id: "mckinney-construction-workers-hiring.md";
+  slug: "mckinney-construction-workers-hiring";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"mesquite-healthcare-aides-openings.md": {
+	id: "mesquite-healthcare-aides-openings.md";
+  slug: "mesquite-healthcare-aides-openings";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"midland-civil-engineers-urgent-need.md": {
+	id: "midland-civil-engineers-urgent-need.md";
+  slug: "midland-civil-engineers-urgent-need";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"mission-fitness-trainers-join.md": {
+	id: "mission-fitness-trainers-join.md";
+  slug: "mission-fitness-trainers-join";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"north-richland-hills-illustrators-jobs.md": {
+	id: "north-richland-hills-illustrators-jobs.md";
+  slug: "north-richland-hills-illustrators-jobs";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"odessa-paralegals-now.md": {
+	id: "odessa-paralegals-now.md";
+  slug: "odessa-paralegals-now";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"pasadena-electricians-apprenticeship.md": {
+	id: "pasadena-electricians-apprenticeship.md";
+  slug: "pasadena-electricians-apprenticeship";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"pearland-welders-urgent-need.md": {
+	id: "pearland-welders-urgent-need.md";
+  slug: "pearland-welders-urgent-need";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"pharr-graphic-designers-jobs.md": {
+	id: "pharr-graphic-designers-jobs.md";
+  slug: "pharr-graphic-designers-jobs";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"plano-sales-representatives-search.md": {
+	id: "plano-sales-representatives-search.md";
+  slug: "plano-sales-representatives-search";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"richardson-software-testers-search.md": {
+	id: "richardson-software-testers-search.md";
+  slug: "richardson-software-testers-search";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"round-rock-event-planners-join.md": {
+	id: "round-rock-event-planners-join.md";
+  slug: "round-rock-event-planners-join";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"san-angelo-delivery-drivers-join.md": {
+	id: "san-angelo-delivery-drivers-join.md";
+  slug: "san-angelo-delivery-drivers-join";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"san-antonio-nurses-jobs.md": {
+	id: "san-antonio-nurses-jobs.md";
+  slug: "san-antonio-nurses-jobs";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"sugar-land-administrative-assistants-available.md": {
+	id: "sugar-land-administrative-assistants-available.md";
+  slug: "sugar-land-administrative-assistants-available";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"temple-editors-join.md": {
+	id: "temple-editors-join.md";
+  slug: "temple-editors-join";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"the-woodlands-retail-staff-hiring.md": {
+	id: "the-woodlands-retail-staff-hiring.md";
+  slug: "the-woodlands-retail-staff-hiring";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"tyler-landscape-workers-join.md": {
+	id: "tyler-landscape-workers-join.md";
+  slug: "tyler-landscape-workers-join";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"victoria-musicians-join.md": {
+	id: "victoria-musicians-join.md";
+  slug: "victoria-musicians-join";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"waco-financial-analysts-now.md": {
+	id: "waco-financial-analysts-now.md";
+  slug: "waco-financial-analysts-now";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
 "warehouse-job-description.md": {
 	id: "warehouse-job-description.md";
   slug: "warehouse-job-description";
@@ -1172,6 +1515,13 @@ declare module 'astro:content' {
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
+"wichita-falls-janitors-jobs.md": {
+	id: "wichita-falls-janitors-jobs.md";
+  slug: "wichita-falls-janitors-jobs";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
 };
 "recruiting": Record<string, {
   id: string;
@@ -1190,5 +1540,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = typeof import("../../src/content/config.js");
+	export type ContentConfig = typeof import("./../../src/content/config.js");
 }
