@@ -14,25 +14,25 @@ hiringOrganization:
   logo: >-
     https://www.virgingalactic.com/
 jobLocation:
-  streetAddress: https://example.com/virgin-logo.png
-  addressLocality: 123 Space Way
-  addressRegion: Chatsworth
-  postalCode: 'CA'
-  addressCountry: 91311
+  streetAddress: 123 Space Way
+  addressLocality: Chatsworth
+  addressRegion: CA
+  postalCode: '91311'
+  addressCountry: USA
 baseSalary:
-  currency: USA
-  value: USD
-  minValue: 22.5
-  maxValue: 20
-  unitText: 25
-experienceRequirements: HOUR
-occupationalCategory: midLevel
+  currency: USD
+  value: 22.5
+  minValue: 20
+  maxValue: 25
+  unitText: HOUR
+experienceRequirements: midLevel
+occupationalCategory: Equipment Operation
 identifier:
-  name: Equipment Operation
-  value: VirginGalactic
+  name: VirginGalactic
+  value: VIRGtnjzgj
 featured: false
 email:
-  - FALSE
+  - jobs@virgingalactic.com
 ---
 
 

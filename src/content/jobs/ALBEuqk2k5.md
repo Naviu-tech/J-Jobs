@@ -14,25 +14,25 @@ hiringOrganization:
   logo: >-
     https://www.albertsons.com/
 jobLocation:
-  streetAddress: https://example.com/albertsons-logo.png
-  addressLocality: 4833 Industrial Drive
-  addressRegion: Glendora
-  postalCode: 'CA'
-  addressCountry: 91740
+  streetAddress: 4833 Industrial Drive
+  addressLocality: Glendora
+  addressRegion: CA
+  postalCode: '91740'
+  addressCountry: USA
 baseSalary:
-  currency: USA
-  value: USD
-  minValue: 30.71
-  maxValue: 28.46
-  unitText: 32.97
-experienceRequirements: HOUR
-occupationalCategory: entryLevel
+  currency: USD
+  value: 30.71
+  minValue: 28.46
+  maxValue: 32.97
+  unitText: HOUR
+experienceRequirements: entryLevel
+occupationalCategory: Inventory Management
 identifier:
-  name: Inventory Management
-  value: Albertsons
-featured: false
+  name: Albertsons
+  value: ALBEuqk2k5
+featured: true
 email:
-  - TRUE
+  - will@jakesjobs.com
 ---
 
 
