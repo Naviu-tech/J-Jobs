@@ -22,6 +22,9 @@ pnpm-debug.log*
 # Google Cloud credentials
 scripts/config/credentials.json
 scripts/config/.env
+/scripts/config/*.json
+/scripts/config/*.json
+
 
 # Scripts and Config
 /scripts/config/.env.local

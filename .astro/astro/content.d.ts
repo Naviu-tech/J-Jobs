@@ -463,6 +463,69 @@ declare module 'astro:content' {
   render(): Render[".md"];
 }>;
 "jobs": {
+"ALBEuqk2k5.md": {
+	id: "ALBEuqk2k5.md";
+  slug: "albeuqk2k5";
+  body: string;
+  collection: "jobs";
+  data: InferEntrySchema<"jobs">
+} & { render(): Render[".md"] };
+"BS33445.md": {
+	id: "BS33445.md";
+  slug: "bs33445";
+  body: string;
+  collection: "jobs";
+  data: InferEntrySchema<"jobs">
+} & { render(): Render[".md"] };
+"DS24680.md": {
+	id: "DS24680.md";
+  slug: "ds24680";
+  body: string;
+  collection: "jobs";
+  data: InferEntrySchema<"jobs">
+} & { render(): Render[".md"] };
+"DS55667.md": {
+	id: "DS55667.md";
+  slug: "ds55667";
+  body: string;
+  collection: "jobs";
+  data: InferEntrySchema<"jobs">
+} & { render(): Render[".md"] };
+"EC77889.md": {
+	id: "EC77889.md";
+  slug: "ec77889";
+  body: string;
+  collection: "jobs";
+  data: InferEntrySchema<"jobs">
+} & { render(): Render[".md"] };
+"GB98765.md": {
+	id: "GB98765.md";
+  slug: "gb98765";
+  body: string;
+  collection: "jobs";
+  data: InferEntrySchema<"jobs">
+} & { render(): Render[".md"] };
+"HC11223.md": {
+	id: "HC11223.md";
+  slug: "hc11223";
+  body: string;
+  collection: "jobs";
+  data: InferEntrySchema<"jobs">
+} & { render(): Render[".md"] };
+"TECH12345.md": {
+	id: "TECH12345.md";
+  slug: "tech12345";
+  body: string;
+  collection: "jobs";
+  data: InferEntrySchema<"jobs">
+} & { render(): Render[".md"] };
+"VIRGtnjzgj.md": {
+	id: "VIRGtnjzgj.md";
+  slug: "virgtnjzgj";
+  body: string;
+  collection: "jobs";
+  data: InferEntrySchema<"jobs">
+} & { render(): Render[".md"] };
 "albertsons-assistant-inventory-clerk-glendora-albeuqk2k5.md": {
 	id: "albertsons-assistant-inventory-clerk-glendora-albeuqk2k5.md";
   slug: "albertsons-assistant-inventory-clerk-glendora-albeuqk2k5";
@@ -1137,13 +1200,6 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "posts": {
-"abilene-photographers-urgent-need.md": {
-	id: "abilene-photographers-urgent-need.md";
-  slug: "abilene-photographers-urgent-need";
-  body: string;
-  collection: "posts";
-  data: InferEntrySchema<"posts">
-} & { render(): Render[".md"] };
 "allen-architects-urgent-need.md": {
 	id: "allen-architects-urgent-need.md";
   slug: "allen-architects-urgent-need";
