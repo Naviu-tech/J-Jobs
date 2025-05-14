@@ -21,8 +21,8 @@ pnpm-debug.log*
 
 # Google Cloud credentials
 scripts/config/credentials.json
+scripts/config/sheets-credentials.json
 scripts/config/.env
-/scripts/config/*.json
 /scripts/config/*.json
 
 
