@@ -9,8 +9,8 @@ datePosted: '2025-02-01T09:00:00.000Z'
 validThrough: '2025-03-03T09:00:00.000Z'
 employmentType: FULL_TIME
 hiringOrganization:
-  name: Prime Partners
-  sameAs: 'https://primepartners.info/'
+  name: Virgin Galactic
+  sameAs: 'https://www.virgingalactic.com/'
   logo: >-
     https://primepartners.info/wp-content/uploads/2020/05/cropped-Prime-Partners-Logo-NO-BG-1-1.png
 jobLocation:
@@ -32,7 +32,7 @@ identifier:
   value: VIRGtnjzgj
 featured: false
 email:
-  - jobs@virgingalactic.com
+  - support@example.com
 ---
 
 ## Role Overview

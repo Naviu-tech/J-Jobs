@@ -9,8 +9,8 @@ datePosted: '2025-01-23T21:52:54.329Z'
 validThrough: '2025-02-22T21:52:54.329Z'
 employmentType: FULL_TIME
 hiringOrganization:
-  name: Prime Partners
-  sameAs: 'https://primepartners.info/'
+  name: Albertsons
+  sameAs: 'https://www.albertsons.com/'
   logo: >-
     https://primepartners.info/wp-content/uploads/2020/05/cropped-Prime-Partners-Logo-NO-BG-1-1.png
 jobLocation:
@@ -32,7 +32,7 @@ identifier:
   value: ALBEuqk2k5
 featured: true
 email:
-  - will@jakesjobs.com
+  - support@example.com
 ---
 
 ## About the Assistant Inventory Clerk
