@@ -8,10 +8,10 @@ datePosted: '{{datePosted}}'
 validThrough: '{{validThrough}}'
 employmentType: FULL_TIME
 hiringOrganization:
-  name: Prime Partners
-  sameAs: 'https://primepartners.info/'
+  name: {{hiringOrgName}}
+  sameAs: '{{hiringOrgUrl}}'
   logo: >-
-    https://primepartners.info/wp-content/uploads/2020/05/cropped-Prime-Partners-Logo-NO-BG-1-1.png
+    {{hiringOrgLogo}}
 jobLocation:
   streetAddress: 123 Main Street
   addressLocality: {{city}}
@@ -35,4 +35,4 @@ email:
   - support@primepartners.info
   - resumes@bestelectricianjobs.zohorecruitmail.com
   - prime.partners+candidate+jl6y59w7r@mail.manatal.com
---- 
+---

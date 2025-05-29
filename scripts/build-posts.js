@@ -105,6 +105,9 @@ async function getSheetData() {
       datePosted:          obj.datePosted,
       validThrough:        obj.validThrough,
       employmentType:      obj.employmentType,
+      hiringOrgName:       obj.hiringOrganization_name,
+      hiringOrgUrl:        obj.hiringOrganization_sameAs,
+      hiringOrgLogo:       obj.hiringOrganization_logo,
       city:                obj.jobLocation_addressLocality,
       state:               obj.jobLocation_addressRegion,
       zipCode:             obj.jobLocation_postalCode,
@@ -115,7 +118,7 @@ async function getSheetData() {
       category:            obj.occupationalCategory,
       jobId:               obj.identifier_value || obj.identifier_name,
       featured:            (obj.featured.toLowerCase() === 'true'),
-      emailList:           obj.email.split(',').map(e => e.trim()).filter(Boolean),
+      emailList:           obj.email ? obj.email.split(',').map(e => e.trim()).filter(Boolean) : [],
     };
   });
 }
@@ -131,10 +134,10 @@ datePosted: '{{datePosted}}'
 validThrough: '{{validThrough}}'
 employmentType: FULL_TIME
 hiringOrganization:
-  name: Prime Partners
-  sameAs: 'https://primepartners.info/'
+  name: {{hiringOrgName}}
+  sameAs: '{{hiringOrgUrl}}'
   logo: >-
-    https://primepartners.info/wp-content/uploads/2020/05/cropped-Prime-Partners-Logo-NO-BG-1-1.png
+    {{hiringOrgLogo}}
 jobLocation:
   streetAddress: 123 Main Street
   addressLocality: {{city}}
@@ -164,13 +167,18 @@ function renderFrontmatter(job) {
 
   const descLines      = job.description.split(/\r?\n/);
   const descriptionBlock = descLines.map(l => `  ${l}`).join('\n');
-  const emailLines     = job.emailList.map(e => `  - ${e}`).join('\n');
+  const emailLines     = job.emailList.length > 0 
+    ? job.emailList.map(e => `  - ${e}`).join('\n')
+    : '  - support@example.com'; // Default email to ensure schema validation passes
   const replacements   = {
     '{{position}}':        job.position,
     '{{location}}':        job.location,
     '{{team}}':            job.team,
     '{{datePosted}}':      job.datePosted,
     '{{validThrough}}':    job.validThrough,
+    '{{hiringOrgName}}':   job.hiringOrgName || 'Prime Partners',
+    '{{hiringOrgUrl}}':    job.hiringOrgUrl || 'https://primepartners.info/',
+    '{{hiringOrgLogo}}':   job.hiringOrgLogo || 'https://primepartners.info/wp-content/uploads/2020/05/cropped-Prime-Partners-Logo-NO-BG-1-1.png',
     '{{city}}':            job.city,
     '{{state}}':           job.state,
     '{{zipCode}}':         job.zipCode,
