@@ -2,14 +2,14 @@
 import "../styles/global.css";
 import Metas from "./seo/Metas.astro";
 import Favicons from "./seo/Favicons.astro";
+import siteConfig from "../config/site.js";
 
 const {
-  title = "Jake's Jobs - Get Hired",
-  description = "Jake's Jobs is the #1 hiring platform for light industrial jobs nationwide.",
+  title = typeof siteConfig.text.seo.homeTitle === 'function' ? siteConfig.text.seo.homeTitle(siteConfig) : siteConfig.text.seo.homeTitle,
+  description = typeof siteConfig.text.seo.homeDescription === 'function' ? siteConfig.text.seo.homeDescription(siteConfig) : siteConfig.text.seo.homeDescription,
   socialImage = "images/ogjake.png",
   twitterImage = "images/ogjake.png",
-  author = "Jake's Jobs",
-  
+  author = siteConfig.text.siteName,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -33,7 +33,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0365EZYHKX"></script>
-<script>
+<script is:inline>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -47,5 +47,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <!-- Mailgo -->
 <script src="https://unpkg.com/mailgo@0.12.2/dist/mailgo.min.js"></script>
 
-
- 
+<!-- Add site configuration to window object for client-side access -->
+<script is:inline define:vars={{ siteConfig }}>
+  window.siteConfig = siteConfig;
+</script>

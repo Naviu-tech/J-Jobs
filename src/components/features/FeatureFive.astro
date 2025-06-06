@@ -1,4 +1,5 @@
 ---
+import siteConfig from "../../config/site.js";
 // Define your list items
 const features = [
   {
@@ -41,7 +42,7 @@ const features = [
       <div class="lg:sticker lg:sticky pb-16 pt-8 top-0">
         <div class="lg:pl-24 md:pl-12">
           <span
-            class="text-sm uppercase font-medium tracking-wide text-indigo-600"
+            class="text-sm uppercase font-medium tracking-wide text-blue-600"
             >Let's go</span
           >
           <h2
@@ -49,12 +50,12 @@ const features = [
             Find Your Next Career Move.
           </h2>
           <p class="text-slate-500 mt-5">
-            At Jake's Jobs, we connect talented individuals with rewarding opportunities. 
+            At {siteConfig.text.siteName}, we connect talented individuals with rewarding opportunities. 
             Our personalized approach helps match your skills with employers who value your potential.
           </p>
           <p class="text-slate-500 mt-5">
             So what are you waiting for? Start your job search today and find 
-            your next career move with Jake's Jobs.
+            your next career move with {siteConfig.text.siteName}.
           </p>
         </div>
       </div>

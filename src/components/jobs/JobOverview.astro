@@ -33,12 +33,12 @@ const salaryRange = `${formatSalary(salary.minValue)} - ${formatSalary(salary.ma
     </div>
 
     <div>
-      <p class="text-lg font-semibold text-indigo-600 ">{salaryRange}</p>
+      <p class="text-lg font-semibold text-blue-600 ">{salaryRange}</p>
     </div>
 
     <button
       id="applyNowButton"
-      class=" text-white items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-indigo-500 duration-200 py-3.5 rounded-full active:bg-indigo-800 active:text-white bg-indigo-500 hover:bg-indigo-600 w-full"
+      class=" text-white items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-blue-500 duration-200 py-3.5 rounded-full active:bg-blue-800 active:text-white bg-blue-500 hover:bg-blue-600 w-full"
     >
       Apply Now!
       <svg xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
@@ -57,4 +57,4 @@ const salaryRange = `${formatSalary(salary.minValue)} - ${formatSalary(salary.ma
   applyButton?.addEventListener('click', () => {
     modal.showModal();
   });
-</script> 
+</script>

@@ -1,3 +1,7 @@
+---
+import siteConfig from "../../config/site.js";
+---
+
 <section class="relative overflow-hidden">
   <div
     class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24">
@@ -5,32 +9,34 @@
       <div>
         <div>
           <span
-            class="text-sm uppercase font-medium tracking-wide text-indigo-600"
-            >Jake's Jobs</span
+            class="text-sm uppercase font-medium tracking-wide text-blue-600"
+            >{siteConfig.text.siteName}</span
           >
           <h2
             class="text-purple-900 font-semibold mt-6 text-4xl lg:text-6xl tracking-tight">
-            Get a Better Job.
-            Get Help from Jake's Jobs.
+            {siteConfig.text.home?.headerTagline || "Get a Better Job."}
+            Get Help from {siteConfig.text.siteName}.
           </h2>
           <p class="text-slate-500 mt-5 lg:text-balance">
-            Looking for your next awesome job? We connect motivated individuals with trusted local employers across the United States.
+            {typeof siteConfig.text.home.description === 'function' 
+              ? siteConfig.text.home.description(siteConfig) 
+              : "Looking for your next awesome job? We connect motivated individuals with trusted local employers across the United States."}
           </p>
         </div>
         <div class="mt-10 flex gap-4">
           <a
-            class="text-white items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-indigo-500 duration-200 py-3.5 rounded-full active:bg-indigo-800 active:text-white bg-indigo-500 hover:bg-indigo-600 w-auto"
-            title="Jake's Jobs Open Positions"
-            aria-label="Jake's Jobs Open Positions"
+            class="text-white items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-blue-500 duration-200 py-3.5 rounded-full active:bg-blue-800 active:text-white bg-blue-500 hover:bg-blue-600 w-auto"
+            title={`${siteConfig.text.siteName} Open Positions`}
+            aria-label={`${siteConfig.text.siteName} Open Positions`}
             href="/">
-            View Jobs
+            {siteConfig.text.buttons.viewJobs}
           </a>
           <a
-            class="text-indigo-600 items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-indigo-500 duration-200 py-3.5 rounded-full active:bg-indigo-800 active:text-white bg-indigo-50 hover:bg-indigo-100 w-auto"
-            title="Contact Jake's Jobs" 
-            aria-label="Contact Jake's Jobs"
+            class="text-blue-600 items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-blue-500 duration-200 py-3.5 rounded-full active:bg-blue-800 active:text-white bg-blue-50 hover:bg-blue-100 w-auto"
+            title={`Contact ${siteConfig.text.siteName}`} 
+            aria-label={`Contact ${siteConfig.text.siteName}`}
             href="/contact">
-            Contact Us
+            {siteConfig.text.nav.about}
           </a>
         </div>
       </div>
@@ -38,14 +44,14 @@
       <div class="lg:mt-0 mt-12 lg:ml-auto">
         <div class="max-w-[366px]">
           <img
-            class="rotate-6 hover:rotate-0 duration-300 drop-shadow-2xl border-2 border-indigo-500 rounded-lg"
+            class="rotate-6 hover:rotate-0 duration-300 drop-shadow-2xl border-2 border-blue-500 rounded-lg"
             src="/images/llll.png"
-            alt="thumbnail"
+            alt={`${siteConfig.text.siteName} image`}
           />
           <img
             src="/images/ll.png"
-            alt="thumbnail"
-            class="-mt-12 lg:-ml-24 -rotate-6 hover:rotate-0 duration-300 drop-shadow-2xl border-2 border-indigo-500 rounded-lg"
+            alt={`${siteConfig.text.siteName} image`}
+            class="-mt-12 lg:-ml-24 -rotate-6 hover:rotate-0 duration-300 drop-shadow-2xl border-2 border-blue-500 rounded-lg"
           />
         </div>
       </div>

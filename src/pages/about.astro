@@ -4,8 +4,10 @@ import CtaOne from "@/components/cta/CtaOne.astro";
 import PricingPage from "@/components/pricing/PricingPage.astro";
 import HeaderTwo from "@/components/headers/HeaderTwo.astro";
 import FeatureFive from "@/components/features/FeatureFive.astro";
-const pageTitle = "Light Industrial Jobs";
-const pageDescription = "Discover your next career opportunity with Jake's Jobs. We connect job seekers with rewarding warehouse and light industrial positions across the United States.";
+import siteConfig from "../config/site.js";
+
+const pageTitle = `About ${siteConfig.text.siteName}`;
+const pageDescription = `Discover your next career opportunity with ${siteConfig.text.siteName}. We connect job seekers with rewarding warehouse and light industrial positions across the United States.`;
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>

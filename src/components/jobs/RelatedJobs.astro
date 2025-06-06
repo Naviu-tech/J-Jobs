@@ -48,18 +48,18 @@ console.log('Debug RelatedJobs:', {
       {relatedJobs.map(job => (
         <a 
           href={`/jobs/${job.slug}`}
-          class="block bg-white p-4 rounded-xl hover:bg-indigo-50 transition-colors group"
+          class="block bg-white p-4 rounded-xl hover:bg-blue-50 transition-colors group"
         >
           <div class="flex items-center justify-between">
             <div>
-              <h3 class="font-medium text-gray-900 group-hover:text-indigo-600">
+              <h3 class="font-medium text-gray-900 group-hover:text-blue-600">
                 {job.data.position}
               </h3>
               <p class="text-sm text-gray-600 mt-1">
                 {job.data.hiringOrganization?.name}
               </p>
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" class="size-5 text-gray-400 group-hover:text-indigo-600" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="size-5 text-gray-400 group-hover:text-blue-600" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
               <path d="M4 12h16m-7-7 7 7-7 7" />
             </svg>
           </div>
@@ -70,7 +70,7 @@ console.log('Debug RelatedJobs:', {
     <div class="mt-6 flex flex-col items-center gap-3">
       <a 
         href={`/jobs/location/${locationSlug}`}
-        class="text-indigo-600 hover:text-indigo-700 font-medium inline-flex items-center gap-2"
+        class="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center gap-2"
       >
         View all jobs in {location}
         <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
@@ -79,7 +79,7 @@ console.log('Debug RelatedJobs:', {
       </a>
       <a 
         href={`/jobs/skill/${categorySlug}`}
-        class="text-indigo-600 hover:text-indigo-700 font-medium inline-flex items-center gap-2"
+        class="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center gap-2"
       >
         View all {category} jobs
         <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
@@ -88,7 +88,7 @@ console.log('Debug RelatedJobs:', {
       </a>
       <a 
         href="/"
-        class="text-indigo-600 hover:text-indigo-700 font-medium inline-flex items-center gap-2"
+        class="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center gap-2"
       >
         View all open positions
         <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
@@ -97,4 +97,4 @@ console.log('Debug RelatedJobs:', {
       </a>
     </div>
   </div>
-)} 
+)}

@@ -1,0 +1,30 @@
+---
+import siteConfig from "../../config/site.js";
+
+interface Props {
+  class?: string;
+  textClass?: string;
+  imgClass?: string;
+  showText?: boolean;
+}
+
+const { 
+  class: className = "", 
+  textClass = "text-4xl text-white font-semibold tracking-tight", 
+  imgClass = "h-14 w-14 mb-4",
+  showText = true
+} = Astro.props;
+---
+
+<a
+  title={siteConfig.text.siteName}
+  aria-label={siteConfig.text.siteName}
+  href="/"
+  class={`flex flex-col items-start ${className}`}>
+  <img
+    src={siteConfig.logo}
+    alt={typeof siteConfig.text.seo.logoAlt === 'function' ? siteConfig.text.seo.logoAlt(siteConfig) : siteConfig.text.seo.logoAlt}
+    class={imgClass} 
+  />
+  {showText && <span class={textClass}>{siteConfig.text.siteName}</span>}
+</a>

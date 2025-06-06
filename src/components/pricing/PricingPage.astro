@@ -1,4 +1,5 @@
 ---
+import siteConfig from "../../config/site.js";
 const pricingPlans = [
   {
     name: "Starter",
@@ -7,7 +8,7 @@ const pricingPlans = [
     description: "Ideal for growing mid-size companies who need to hire 1 or 2 employees.",
     cardBgClass: "bg-white",
     descriptionColor: "text-slate-500", 
-    buttonClass: "bg-indigo-500 hover:bg-indigo-600 text-white",
+    buttonClass: "bg-blue-500 hover:bg-blue-600 text-white",
     features: [
       "5 active job postings",
       "30-day listings",
@@ -29,7 +30,7 @@ const pricingPlans = [
       "For large companies with monthly ongoing hiring needs in multiple locations.",
     cardBgClass: "bg-white",
     descriptionColor: "text-slate-500",
-    buttonClass: "bg-indigo-100 hover:bg-indigo-50 text-indigo-600",
+    buttonClass: "bg-blue-100 hover:bg-blue-50 text-blue-600",
     features: [
       "50 job postings",
       "30-day listings",
@@ -50,7 +51,7 @@ const pricingPlans = [
       "Perfect for staffing agencies with ongoing hiring needs nationwide",
     cardBgClass: "bg-white", 
     descriptionColor: "text-slate-500",
-    buttonClass: "bg-indigo-100 hover:bg-indigo-50 text-indigo-600",
+    buttonClass: "bg-blue-100 hover:bg-blue-50 text-blue-600",
     
     features: [
       "Unlimited job postings",
@@ -123,7 +124,7 @@ const extended = [
 <section x-data="{annual: false}">
   <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 pb-12 pt-24">
     <div class="text-center">
-      <span class="text-sm uppercase font-medium tracking-wide text-indigo-600"
+      <span class="text-sm uppercase font-medium tracking-wide text-blue-600"
         >pricing</span
       >
       <h1
@@ -188,7 +189,7 @@ const extended = [
               </div>
               <div class="flex mt-6">
                 <a
-                  href="mailto:will@jakesjobs.com"
+                  href={`mailto:${siteConfig.socialLinks[0].url.includes('@') ? siteConfig.socialLinks[0].url : 'hello@' + siteConfig.text.siteName.toLowerCase().replace(/[^a-z0-9]/g, '') + '.com'}`}
                   class={`inline-flex items-center justify-center px-6 py-3.5 rounded-full w-full font-medium ${plan.buttonClass}`}
                   title={plan.name}
                   aria-label="get started">
@@ -255,7 +256,7 @@ const extended = [
     </div>
 
     <div class="mt-24">
-      <span class="text-sm uppercase font-medium tracking-wide text-indigo-600"
+      <span class="text-sm uppercase font-medium tracking-wide text-blue-600"
         >features</span
       >
       <h2
@@ -264,7 +265,7 @@ const extended = [
       </h2>
       <div class="max-w-xl mt-6">
         <p class="text-slate-500">
-          Jake's Jobs gives you all the tools to find, evaluate, and hire.
+          {siteConfig.text.siteName} gives you all the tools to find, evaluate, and hire.
         </p>
       </div>
     </div>

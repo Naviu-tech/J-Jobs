@@ -1,3 +1,7 @@
+---
+import siteConfig from "../../config/site.js";
+---
+
 <section class="relative overflow-hidden border-b bg-white">
   <div
     class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-12 lg:py-24 items-center relative">
@@ -5,30 +9,29 @@
       class="lg:mx-auto lg:max-w-7xl lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
       <div class="lg:pr-24 md:pr-12">
         <span class="text-sm uppercase font-medium tracking-wide text-indigo-600 "
-          >Jake's Jobs</span
+          >{typeof siteConfig.text.headers.electricians.tagline === 'function' ? siteConfig.text.headers.electricians.tagline(siteConfig) : siteConfig.text.headers.electricians.tagline}</span
         >
         <h1
           class="text-purple-900 font-semibold mt-6 text-4xl lg:text-5xl tracking-tight">
-          Find Qualified Electricians Faster
+          {siteConfig.text.headers.electricians.title}
         </h1>
         <p class="text-slate-500 mt-5 lg:text-pretty">
-          Commercial, Residential, and Industrial Electricians. Fire Alarm, Controls, Security, Solar, Voice/Data, and Audio/Visual Jobs.
-
+          {siteConfig.text.headers.electricians.description}
         </p>
         <div class="mt-10 flex gap-4">
           <a
             class="text-white items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-indigo-500 duration-200 py-3.5 rounded-full active:bg-indigo-800 active:text-white bg-indigo-500 hover:bg-indigo-600 w-auto"
-            title="Jake's Jobs Open Positions"
-            aria-label="Jake's Jobs Open Positions"
+            title={`${siteConfig.text.siteName} Open Positions`}
+            aria-label={`${siteConfig.text.siteName} Open Positions`}
             href="/">
-            View Jobs
+            {siteConfig.text.buttons.viewJobs}
           </a>
           <a
             class="text-indigo-600 items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-indigo-500 duration-200 py-3.5 rounded-full active:bg-indigo-800 active:text-white bg-indigo-50 hover:bg-indigo-100 w-auto"
-            title="About Us" 
-            aria-label="About Us"
+            title={siteConfig.text.nav.about} 
+            aria-label={siteConfig.text.nav.about}
             href="/about">
-            About Us
+            {siteConfig.text.buttons.aboutUs}
           </a>
         </div>
       </div>

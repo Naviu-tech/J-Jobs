@@ -1,5 +1,7 @@
 ---
 import { getCollection } from "astro:content";
+import Logo from "./Logo.astro";
+import siteConfig from "../../config/site.js";
 
 const allJobs = await getCollection("jobs");
 
@@ -25,6 +27,17 @@ const formatUrl = (value: string, type: string) => {
   // Convert spaces and commas to hyphens, make lowercase
   const formattedValue = value.toLowerCase().replace(/,?\s+/g, '-');
   return `/jobs/${type}/${formattedValue}-jobs`;
+};
+
+// Create social links section from config
+const socialsSection = {
+  title: "Socials",
+  links: siteConfig.socialLinks.map(social => ({
+    href: social.url,
+    label: social.label,
+    target: "_blank",
+    rel: "noopener noreferrer",
+  })),
 };
 
 const footerSections = [
@@ -58,37 +71,17 @@ const footerSections = [
       },
     ],
   },
-  {
-    title: "Socials",
-    links: [
-      {
-        href: "https://www.linkedin.com/company/jakesjobs/about/",
-        label: "LinkedIn",
-        target: "_blank",
-        rel: "noopener noreferrer",
-      },
-    ],
-  },
+  // Use the social links from config
+  socialsSection,
 ];
 ---
 
-<footer class="bg-indigo-800">
+<footer class="bg-blue-800">
   <div
     class="items-center max-w-7xl lg:px-16 md:px-12 mx-auto px-8 xl:px-24 pt-24 pb-12">
     <div class="xl:gap-8 xl:grid xl:grid-cols-3">
       <div class="text-white xl:col-span-3">
-        <a
-          title="Jake's Jobs"
-          aria-label="Jake's Jobs"
-          href="/"
-          class="text-4xl text-white font-semibold tracking-tight flex flex-col items-start">
-          <img
-          src="/images/jakes.png"
-          alt="Jake's Jobs Logo"
-          class="h-14 w-14 mb-4" 
-        />
-          Jake's Jobs
-        </a>
+        <Logo />
       </div>
       <div
         class="mt-8 grid gap-8 grid-cols-2 md:grid-cols-2 lg:mt-12 lg:col-span-3">
@@ -105,8 +98,10 @@ const footerSections = [
                       <a
                         href={link.href}
                         class="text-white/80 hover:text-white font-normal text-sm"
-                        title="link to your page"
-                        aria-label="your label">
+                        title={link.label}
+                        aria-label={link.label}
+                        target={link.target || undefined}
+                        rel={link.rel || undefined}>
                         {link.label}
                       </a>
                     </li>
@@ -129,8 +124,10 @@ const footerSections = [
                       <a
                         href={link.href}
                         class="text-white/80 hover:text-white font-normal text-sm"
-                        title="link to your page"
-                        aria-label="your label">
+                        title={link.label}
+                        aria-label={link.label}
+                        target={link.target || undefined}
+                        rel={link.rel || undefined}>
                         {link.label}
                       </a>
                     </li>
@@ -146,12 +143,12 @@ const footerSections = [
       <!-- Buttons container -->
       <div class="flex flex-col md:flex-row justify-center gap-6 mb-12">
         <a
-          class="text-white items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-indigo-500 duration-200 py-3.5 rounded-full active:bg-indigo-800 active:text-white bg-indigo-500 hover:bg-indigo-600 w-full"
+          class="text-white items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-blue-500 duration-200 py-3.5 rounded-full active:bg-blue-800 active:text-white bg-blue-500 hover:bg-blue-600 w-full"
           href="/">
           Open Positions
         </a>
         <a
-          class="text-white items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-indigo-500 duration-200 py-3.5 rounded-full active:bg-indigo-800 active:text-white bg-transparent border-white border hover:border-indigo-500 w-full"
+          class="text-white items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-blue-500 duration-200 py-3.5 rounded-full active:bg-blue-800 active:text-white bg-transparent border-white border hover:border-blue-500 w-full"
           href="/articles">
           Read Articles
         </a>
@@ -228,7 +225,7 @@ end comment out -->
             href="/infopages/terms">
             Terms & Conditions
           </a>
-          <span class="text-indigo-500">⏤</span>
+          <span class="text-blue-500">⏤</span>
           <a
             class="text-white/40 hover:text-white font-normal text-xs"
             href="/infopages/privacy">

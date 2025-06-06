@@ -1,0 +1,26 @@
+---
+import siteConfig from "../../config/site.js";
+
+interface Props {
+  jobId?: string;
+  buttonText?: string;
+  buttonClass?: string;
+}
+
+const { 
+  jobId,
+  buttonText = siteConfig.text.buttons.applyNow,
+  buttonClass = "text-white items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-blue-500 duration-200 py-3.5 rounded-full active:bg-blue-800 active:text-white bg-blue-500 hover:bg-blue-600 w-full"
+} = Astro.props;
+
+// Replace the jobId placeholder in the form URL
+const formUrl = jobId 
+  ? siteConfig.forms.jobSeeker.replace("{{jobId}}", jobId)
+  : siteConfig.forms.jobSeeker.replace("{{jobId}}", "");
+---
+
+<div class="job-application-form">
+  <a href={formUrl} class={buttonClass} target="_blank" rel="noopener noreferrer">
+    {buttonText}
+  </a>
+</div>

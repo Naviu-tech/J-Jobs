@@ -1,0 +1,21 @@
+---
+import siteConfig from "../../config/site.js";
+
+interface Props {
+  buttonText?: string;
+  buttonClass?: string;
+}
+
+const { 
+  buttonText = "Post a job",
+  buttonClass = "text-white items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-blue-500 duration-200 py-3.5 rounded-full active:bg-blue-800 active:text-white bg-blue-500 hover:bg-blue-600 w-full"
+} = Astro.props;
+
+const formUrl = siteConfig.forms.employer;
+---
+
+<div class="employer-form">
+  <a href={formUrl} class={buttonClass} target="_blank" rel="noopener noreferrer">
+    {buttonText}
+  </a>
+</div>

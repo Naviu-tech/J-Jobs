@@ -29,7 +29,7 @@ const { jobTitle, company, location, jobId, emails } = Astro.props;
       </button>
 
       <div class="text-center mb-8">
-        <span class="text-sm font-medium tracking-wide text-indigo-600 uppercase">
+        <span class="text-sm font-medium tracking-wide text-blue-600 uppercase">
           {company}
         </span>
         <h2 class="text-purple-900 font-semibold text-2xl mt-2">
@@ -100,7 +100,7 @@ const { jobTitle, company, location, jobId, emails } = Astro.props;
             name="resume"
             required
             accept=".pdf,.doc,.docx"
-            class="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-medium file:bg-indigo-50 file:text-indigo-600 hover:file:bg-indigo-100"
+            class="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-medium file:bg-blue-50 file:text-blue-600 hover:file:bg-blue-100"
           />
         </div>
 
@@ -119,7 +119,7 @@ const { jobTitle, company, location, jobId, emails } = Astro.props;
           <button
             type="submit"
             id="submitButton"
-            class="w-full text-white items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-indigo-500 duration-200 py-3.5 rounded-full active:bg-indigo-800 active:text-white bg-indigo-500 hover:bg-indigo-600"
+            class="w-full text-white items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-blue-500 duration-200 py-3.5 rounded-full active:bg-blue-800 active:text-white bg-blue-500 hover:bg-blue-600"
           >
             Submit Application
           </button>
@@ -201,7 +201,7 @@ const { jobTitle, company, location, jobId, emails } = Astro.props;
 
       // Show success message
       statusMessage.classList.remove('hidden');
-      statusMessage.classList.add('bg-indigo-50', 'text-indigo-800');
+      statusMessage.classList.add('bg-blue-50', 'text-blue-800');
       statusMessage.innerHTML = `
         <div class="flex items-center gap-2">
           <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">

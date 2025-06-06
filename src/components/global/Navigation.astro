@@ -1,15 +1,20 @@
+---
+import siteConfig from "../../config/site.js";
+---
+
 <div class="w-full mx-auto">
   <div
     x-data="{ open: false }"
     class="relative flex flex-col w-full p-5 mx-auto md:items-center md:justify-between md:flex-row max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24">
     <div class="flex flex-row items-center justify-between lg:justify-start">
       <a
-        title="Jakes Jobs"
-            aria-label="Jakes Jobs" href="/"
-        class="text-2xl text-indigo-600 font-bold tracking-tight inline-flex gap-2 items-center font-bold italic">
+        title={siteConfig.text.siteName}
+        aria-label={siteConfig.text.siteName} 
+        href="/"
+        class="text-2xl text-blue-600 font-bold tracking-tight inline-flex gap-2 items-center font-bold italic">
         <img
-          src="/images/ja.png"
-          alt="Jake's Jobs Logo"
+          src={siteConfig.logo}
+          alt={siteConfig.text.seo.logoAlt}
           class="h-12 mb-4" 
         />
       </a>
@@ -45,26 +50,20 @@
         class="gap-2 list-none  items-center md:flex-row flex-col flex">
         <li>
           <a
-            title="Jake's Jobs About"
-            aria-label="Jake's Jobs About" href="/about"
+            title={`${siteConfig.text.siteName} ${siteConfig.text.nav.about}`}
+            aria-label={`${siteConfig.text.siteName} ${siteConfig.text.nav.about}`} 
+            href="/about"
             class="px-2 lg:px-6 py-2.5 md:px-3 text-sm font-semibold text-slate-600 hover:text-purple-900">
-            About
+            {siteConfig.text.nav.about}
           </a>
         </li>
         <li>
           <a
-            title="Jake's Jobs Articles"
-            aria-label="Jake's Jobs Articles" href="/articles"
-            class="px-2 lg:px-6 py-2.5 md:px-3 text-sm font-semibold text-slate-600 hover:text-purple-900">
-            Articles
-          </a>
-        </li>
-        <li>
-          <a
-            title="Jake's Jobs Open Positions"
-            aria-label="Jake's Jobs Open Positions" href="/"
-            class="text-indigo-700 items-center tracking-tight font-semibold gap-3 text-base inline-flex hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 py-2.5 rounded-full w-auto">
-             Jobs
+            title={`${siteConfig.text.siteName} Open Positions`}
+            aria-label={`${siteConfig.text.siteName} Open Positions`} 
+            href="/"
+            class="text-blue-700 items-center tracking-tight font-semibold gap-3 text-base inline-flex hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 py-2.5 rounded-full w-auto">
+             {siteConfig.text.nav.jobs}
           </a>
         </li>
       </ul>
