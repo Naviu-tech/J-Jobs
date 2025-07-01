@@ -8,10 +8,10 @@ import siteConfig from "../config/site.js";
 const { frontmatter } = Astro.props;
 
 // Create dynamic SEO title and description
-const seoTitle = `Hiring: ${frontmatter.position} in ${frontmatter.location}`;
-const seoDescription = frontmatter.description.length > 160 
+const seoTitle = frontmatter.metaTitle || `Hiring: ${frontmatter.position} in ${frontmatter.location}`;
+const seoDescription = frontmatter.metaDescription || (frontmatter.description.length > 160 
   ? `${frontmatter.description.substring(0, 157)}...`
-  : frontmatter.description;
+  : frontmatter.description);
 
 // Create JSON-LD schema
 const jobSchema = {
@@ -58,7 +58,7 @@ const jobSchema = {
 };
 ---
 
-<BaseLayout title={seoTitle} description={seoDescription}>
+<BaseLayout title={seoTitle} description={seoDescription} socialImage={frontmatter.hiringOrganization.logo} twitterImage={frontmatter.hiringOrganization.logo}>
   <Fragment slot="head">
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).toString()} />
@@ -241,9 +241,9 @@ const jobSchema = {
       <div class="bg-blue-900 max-w-7xl mx-auto lg:rounded-3xl">
         <div class="mx-auto max-w-7xl lg:px-16 md:px-12 px-8 xl:px-24 py-24">
           <div>
-            <h2
+<h2
               class="text-white font-semibold tracking-tighter lg:text-5xl text-3xl">
-              Jake's Jobs: {frontmatter.position}
+              {siteConfig.text.siteName}: {frontmatter.position}
             </h2>
             <p class="text-slate-300 mt-5 lg:text-balance">
               At Jake's Jobs, we're looking for passionate individuals to fill the role of <strong>{frontmatter.position}</strong> at <strong>{frontmatter.hiringOrganization.name}</strong>. You're encouraged to apply even if your experience doesn't precisely match the job description. Your skills and passion will stand out—and set you apart—especially if your career has taken some extraordinary twists and turns. At Jake's Jobs, we welcome diverse perspectives and people who think rigorously and aren't afraid to challenge assumptions. Join us in shaping the future of the electrical industry.

@@ -71,7 +71,7 @@ if (!credentials) {
 
 // 2) Spreadsheet settings
 const SPREADSHEET_ID = '166JIv4epwIesnW9U-cnYcaau7VAOU0kMEzqdUMde6nc';
-const SHEET_RANGE    = 'Jobs!A1:Y'; // headers in row1, data start row2
+const SHEET_RANGE    = 'Jobs!A1:AC'; // headers in row1, data start row2
 
 // 3) Fetch & map sheet data
 async function getSheetData() {
@@ -119,6 +119,8 @@ async function getSheetData() {
       jobId:               obj.identifier_value || obj.identifier_name,
       featured:            (obj.featured.toLowerCase() === 'true'),
       emailList:           obj.email ? obj.email.split(',').map(e => e.trim()).filter(Boolean) : [],
+      metaTitle:           obj.metaTitle || '',
+      metaDescription:     obj.metaDescription || '',
     };
   });
 }
@@ -128,6 +130,9 @@ const TEMPLATE = `---
 position: {{position}}
 description: |
 {{descriptionBlock}}
+metaTitle: {{metaTitle}}
+metaDescription: |
+{{metaDescriptionBlock}}
 location: '{{location}}'
 team: {{team}}
 datePosted: '{{datePosted}}'
@@ -167,6 +172,8 @@ function renderFrontmatter(job) {
 
   const descLines      = job.description.split(/\r?\n/);
   const descriptionBlock = descLines.map(l => `  ${l}`).join('\n');
+  const metaDescLines = job.metaDescription.split(/\r?\n/);
+  const metaDescriptionBlock = metaDescLines.map(l => `  ${l}`).join('\n');
   const emailLines     = job.emailList.length > 0 
     ? job.emailList.map(e => `  - ${e}`).join('\n')
     : '  - support@example.com'; // Default email to ensure schema validation passes
@@ -190,6 +197,8 @@ function renderFrontmatter(job) {
     '{{jobId}}':           job.jobId,
     '{{featured}}':        job.featured ? 'true' : 'false',
     '{{descriptionBlock}}': descriptionBlock,
+    '{{metaTitle}}':       job.metaTitle,
+    '{{metaDescriptionBlock}}': metaDescriptionBlock,
     '{{emailLines}}':      emailLines,
   };
 

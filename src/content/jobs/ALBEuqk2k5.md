@@ -3,6 +3,10 @@ position: Assistant Inventory Clerk
 description: |
   ## About the Assistant Inventory Clerk
   Handles inventory counts and data entry.
+metaTitle: Glendora
+metaDescription: |
+  ## About the Assistant Inventory Clerk
+  Handles inventory counts and data entry.
 location: 'Glendora'
 team: Industrial
 datePosted: '2025-01-23T21:52:54.329Z'
@@ -32,7 +36,7 @@ identifier:
   value: ALBEuqk2k5
 featured: true
 email:
-  - support@example.com
+  - will@jakesjobs.com
 ---
 
 ## About the Assistant Inventory Clerk

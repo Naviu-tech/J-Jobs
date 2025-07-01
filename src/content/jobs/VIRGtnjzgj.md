@@ -3,6 +3,10 @@ position: Warehouse Forklift Operator
 description: |
   ## Role Overview
   Operate forklift to move pallets in the warehouse.
+metaTitle: Chatsworth
+metaDescription: |
+  ## Role Overview
+  Operate forklift to move pallets in the warehouse.
 location: 'Chatsworth'
 team: Equipment Operation
 datePosted: '2025-02-01T09:00:00.000Z'
@@ -32,7 +36,7 @@ identifier:
   value: VIRGtnjzgj
 featured: false
 email:
-  - support@example.com
+  - jobs@virgingalactic.com
 ---
 
 ## Role Overview
