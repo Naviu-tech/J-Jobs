@@ -52,6 +52,8 @@ const jobsCollection = defineCollection({
   schema: z.object({
     position: z.string(),
     description: z.string(),
+    metaTitle: z.string().optional(),
+    metaDescription: z.string().optional(),
     location: z.string(),
     team: z.string(),
     datePosted: z.string(),
