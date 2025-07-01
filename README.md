@@ -67,7 +67,7 @@ For full functionality, you'll need:
 3. Set up company profiles with the [Adding Companies Guide](docs/adding-companies.md)
 
 **Daily Operations:**
-- Import jobs from Google Sheets using GitHub Actions workflow
+- Import jobs from Google Sheets: `npm run import:jobs`
 - Monitor job expiration dates and update content
 - Review and approve automated content updates
 
@@ -123,7 +123,7 @@ For full functionality, you'll need:
 - **[About Page Editing Guide](docs/about-page-editing-guide.md)** - Customizing your about page content
 
 ### Advanced Features
-- **Automation Scripts** - Located in `/scripts` directory with individual documentation
+- **Automation Scripts** - Run via `npm run` commands (see Content Management Scripts section)
 - **SEO Implementation** - Structured data and meta tag optimization built-in
 - **Content Collections** - Astro-powered content management system
 
@@ -142,13 +142,15 @@ The platform supports multiple content update methods:
 - Real-time preview in development mode
 
 **3. Bulk Operations**
-- Scripts for updating job categories, locations, or dates
+- Update job categories: `npm run update-category-values`
+- Update job dates: `npm run update-dates` or `npm run update-recent-dates`
+- Update company information: `npm run update-company-names`
 - Content migration and cleanup utilities
 - Batch processing for large datasets
 
 ## 🛠 Development
 
-### Key Scripts
+### Development Scripts
 
 ```bash
 npm run dev          # Start development server
@@ -157,11 +159,57 @@ npm run preview      # Preview production build
 npm run astro        # Run Astro CLI commands
 ```
 
+### Content Management Scripts
+
+```bash
+# Job Management
+npm run import:jobs              # Import jobs from Google Sheets (primary)
+npm run index-jobs               # Index and organize job listings
+npm run create-jobs              # Generate new job postings
+npm run create-varied-jobs       # Create job variations
+npm run update-dates             # Update job posting dates
+npm run update-recent-dates      # Update recent job dates
+
+# Content Generation
+npm run create-blog-posts        # Generate blog content
+npm run create:recruiting        # Create recruiting content
+npm run create-glossary          # Generate glossary entries
+npm run update-state             # Generate location-specific content
+
+# Notifications & Updates
+npm run notify-content-updates   # Send content update notifications
+npm run notify-updated           # Notify about updated jobs
+npm run notify-deleted           # Notify about deleted jobs
+
+# Company & Data Management
+npm run update-company-names     # Update company information
+npm run update-category-values   # Update job categories
+npm run update-team-values       # Update team assignments
+npm run list-jobs                # List current job postings
+npm run count-new                # Count new files
+npm run count-locations          # Count jobs by location
+```
+
 ### Automation Scripts
-- `scripts/update-descriptions.js` - AI-powered job description updates
-- `scripts/update-state-content.js` - Location-specific content generation
-- `scripts/notify-content-updates.js` - Stakeholder notification system
-- `scripts/index-jobs.js` - Job indexing and organization (from Google Sheet)
+
+Run these scripts using npm commands:
+
+```bash
+npm run import:jobs              # Import jobs from Google Sheets
+npm run index-jobs               # Index and organize job listings
+npm run update-dates             # Update job posting dates
+npm run create-jobs              # Generate new job postings
+npm run notify-content-updates   # Send content update notifications
+npm run update-state             # Generate location-specific content
+npm run create-blog-posts        # Generate blog content
+npm run update-company-names     # Update company information
+```
+
+**Key Scripts:**
+- `import:jobs` - Primary job import from Google Sheets
+- `index-jobs` - Job indexing and organization
+- `notify-content-updates` - Stakeholder notification system
+- `update-state` - Location-specific content generation
 
 ## 🔍 SEO Features
 
@@ -181,4 +229,7 @@ The platform is optimized for static hosting providers:
 
 ---
 
-**Need Help?** Check the [documentation](docs/) directory for detailed guides, or review the automation scripts for advanced customization options.
+**Need Help?** 
+- Check the [documentation](docs/) directory for detailed guides
+- Run `npm run` to see all available scripts
+- Review the Content Management Scripts section above for automation options
