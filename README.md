@@ -127,6 +127,9 @@ For full functionality, you'll need:
 - **SEO Implementation** - Structured data and meta tag optimization built-in
 - **Content Collections** - Astro-powered content management system
 
+### Framework & Development
+- **[Astro Framework Guide](docs/astro-framework-guide.md)** - Complete guide to working with Astro, adding content types, and customizing components
+
 ## 🔄 Content Updates
 
 The platform supports multiple content update methods:
