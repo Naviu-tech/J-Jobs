@@ -1,4 +1,6 @@
 ---
+import siteConfig from "../../config/site.js";
+
 interface Props {
   position: string;
   city: string;
@@ -9,9 +11,10 @@ interface Props {
     maxValue: number;
     unitText: string;
   };
+  jobId?: string;
 }
 
-const { position, city, state, salary } = Astro.props;
+const { position, city, state, salary, jobId } = Astro.props;
 
 // Format salary range
 const formatSalary = (value: number) => {
@@ -23,6 +26,11 @@ const formatSalary = (value: number) => {
 };
 
 const salaryRange = `${formatSalary(salary.minValue)} - ${formatSalary(salary.maxValue)} / ${salary.unitText.toLowerCase()}`;
+
+// Generate Google Form URL with job ID
+const formUrl = jobId 
+  ? siteConfig.forms.jobSeeker.replace("{{jobId}}", jobId)
+  : siteConfig.forms.jobSeeker.replace("{{jobId}}", "");
 ---
 
 <div class="mt-12 bg-white rounded-3xl p-8 border mb-12 border-slate-200">
@@ -36,25 +44,19 @@ const salaryRange = `${formatSalary(salary.minValue)} - ${formatSalary(salary.ma
       <p class="text-lg font-semibold text-blue-600 ">{salaryRange}</p>
     </div>
 
-    <button
-      id="applyNowButton"
+    <a
+      href={formUrl}
+      target="_blank"
+      rel="noopener noreferrer"
       class=" text-white items-center font-medium gap-3 inline-flex focus-visible:outline-2 focus-visible:outline-offset-2 focus:outline-none justify-center px-6 lg:px-8 ring-2 ring-transparent focus:ring-offset-2 focus:ring-blue-500 duration-200 py-3.5 rounded-full active:bg-blue-800 active:text-white bg-blue-500 hover:bg-blue-600 w-full"
     >
       Apply Now!
       <svg xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
         <path d="M4 12h16m-7-7 7 7-7 7" />
       </svg>
-    </button>
+    </a>
     <p class="text-sm text-slate-600">*Please note, even if you do not possess all of the skills listed, we encourage you to apply!</p>
   </div>
 </div>
 
-<script>
-  // Add click handler for the apply button
-  const applyButton = document.getElementById('applyNowButton');
-  const modal = document.getElementById('applicationModal') as HTMLDialogElement;
 
-  applyButton?.addEventListener('click', () => {
-    modal.showModal();
-  });
-</script>

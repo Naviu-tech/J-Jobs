@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-import ApplicationModal from "../components/jobs/ApplicationModal.astro";
 import RelatedJobs from "../components/jobs/RelatedJobs.astro";
 import JobOverview from "../components/jobs/JobOverview.astro";
 import JobSeekerForm from "../components/forms/JobSeekerForm.astro";
@@ -224,6 +223,7 @@ const jobSchema = {
             city={frontmatter.jobLocation.addressLocality}
             state={frontmatter.jobLocation.addressRegion}
             salary={frontmatter.baseSalary}
+            jobId={frontmatter.identifier.value}
           />
 
           <RelatedJobs 
@@ -260,13 +260,7 @@ const jobSchema = {
       </div>
     </div>
   </section>
-  <ApplicationModal 
-    jobTitle={frontmatter.position}
-    company={frontmatter.hiringOrganization.name}
-    location={frontmatter.location}
-    jobId={frontmatter.identifier.value}
-    emails={frontmatter.email}
-  />
+
 </BaseLayout>
 
 <script>
