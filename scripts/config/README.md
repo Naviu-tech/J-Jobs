@@ -34,6 +34,10 @@ GOOGLE_SHEETS_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nYOUR_PRIVATE_KEY_HERE\n-
 GOOGLE_SHEETS_CLIENT_EMAIL=your-service-account@your-project-id.iam.gserviceaccount.com
 GOOGLE_SHEETS_CLIENT_ID=your-client-id
 
+# Spreadsheet configuration
+GOOGLE_SHEETS_SPREADSHEET_ID=your-spreadsheet-id
+GOOGLE_SHEETS_RANGE=Jobs!A1:AC
+
 # Optional fields (defaults will be used if not provided)
 GOOGLE_SHEETS_AUTH_URI=https://accounts.google.com/o/oauth2/auth
 GOOGLE_SHEETS_TOKEN_URI=https://oauth2.googleapis.com/token

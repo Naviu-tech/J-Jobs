@@ -70,8 +70,12 @@ if (!credentials) {
 }
 
 // 2) Spreadsheet settings
-const SPREADSHEET_ID = '166JIv4epwIesnW9U-cnYcaau7VAOU0kMEzqdUMde6nc';
-const SHEET_RANGE    = 'Jobs!A1:AC'; // headers in row1, data start row2
+const SPREADSHEET_ID = process.env.GOOGLE_SHEETS_SPREADSHEET_ID || '166JIv4epwIesnW9U-cnYcaau7VAOU0kMEzqdUMde6nc';
+const SHEET_RANGE    = process.env.GOOGLE_SHEETS_RANGE || 'Jobs!A1:AC'; // headers in row1, data start row2
+
+// Log configuration for debugging
+console.log('📊 Using spreadsheet ID:', SPREADSHEET_ID);
+console.log('📋 Using sheet range:', SHEET_RANGE);
 
 // 3) Fetch & map sheet data
 async function getSheetData() {
