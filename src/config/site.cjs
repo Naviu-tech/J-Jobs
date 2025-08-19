@@ -7,7 +7,7 @@ module.exports = {
    */
   colors: {
     /** Primary brand color */
-    main: "#077b8a", // Current blue-500
+    main: "#FFFF00", // Current blue-500
     /** Secondary brand color */
     secondary: "#5c3c92", // Current purple-500
   },
